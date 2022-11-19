@@ -9,8 +9,16 @@ use App\Http\Requests\Admin\PostFormRequest;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 
+
 class PostController extends Controller
 {
+    public function dashboard()
+    {
+        $posts = Post::all();
+        $category = Category::all();
+        return view('admin.dashboard', compact('posts', 'category'));
+    }
+
     public function index()
     {
         $posts = Post::all();
@@ -68,5 +76,12 @@ class PostController extends Controller
         $post->update();
 
         return redirect('admin/posts')->with('message', 'Post Updated Succesfully');
+    }
+
+    public function delete($post_id)
+    {
+        $post = Post::find($post_id);
+        $post->delete();
+        return redirect('admin/posts')->with('message', 'Post Deleted Succesfully');
     }
 }

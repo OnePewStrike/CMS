@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
 Auth::routes();
@@ -37,4 +37,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
     Route::get('post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
     Route::put('update-post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
+    Route::get('delete-post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'delete']);
+
+    Route::get('users', [App\Http\Controllers\Admin\UserController::class, 'index']);
+    Route::get('user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'edit']);
+    Route::put('update-user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
 });

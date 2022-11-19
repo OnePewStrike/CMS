@@ -11,7 +11,7 @@
 
     <div class="card-header">
       <h4>Edit Posts
-        <a href="{{ url('admin/posts/'.$post->id) }}" class="btn btn-danger float-end">BACK</a>
+        <a href="{{ url('admin/posts/') }}" class="btn btn-danger float-end">BACK</a>
       </h4>
       
     </div>
@@ -19,16 +19,17 @@
     <div class="card-body">
 
       @if ($errors->any())
-        <div class="alert alert-danger">
+        <div class="alert alert-danger"> 
           @foreach ($errors->all() as $error)
             <div> {{ $error }} </div>
           @endforeach
         </div>
       @endif
       
-      <form action="{{ url('admin/update-post') }}" method="POST">
+      <form action="{{ url('admin/update-post/'.$post->id) }}" method="POST">
         @csrf
         @method('PUT')
+
         <div class="mb-3">
           <label for="">Category</label>
           <select name="category_id" required class="form-control">

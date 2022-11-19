@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'View Post')
+@section('title', 'View Users')
 
 @section('content')
 
@@ -9,10 +9,8 @@
 
         <div class="card mt-4">
 
-            <div class="card-header">
-                <h4 class="mt-2">View Posts
-                    <a href="{{ url('admin/add-post') }}" class="btn btn-quarternary float-end">Add Posts</a>
-                </h4>
+            <div class="card-header mt-2">
+                <h4>View Users</h4>
 
             </div>
 
@@ -25,24 +23,22 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Category Name</th>
-                            <th>Post Name</th>
-                            <th>Status</th>
-                            <th>Edit</th>
+                            <th>Userame</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $item)
+                        @foreach ($users as $item)
                             <tr>
                                 <td>{{ $item->id }}</td>
-                                <td>{{ $item->category->name }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->status == '1' ? 'Hidden' : 'Shown' }}</td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->role_as == '1' ? 'Admin' : 'User' }}</td>
                                 <td>
-                                    <a href=" {{ url('admin/post/' . $item->id) }}" class="btn btn-success"><i
+                                    <a href="{{ url('admin/user/' . $item->id) }}" class="btn btn-success"><i
                                             class="fa-solid fa-pen-to-square"></i></a>
-                                    <a href=" {{ url('admin/delete-post/' . $item->id) }}" class="btn btn-danger"><i
-                                            class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         @endforeach
