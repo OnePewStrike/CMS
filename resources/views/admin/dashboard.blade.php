@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Blog Dashboard')
+@section('title', 'Dashboard')
 
 @section('content')
     <div class="db-container">
@@ -76,7 +76,7 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Userame</th>
+                                            <th>Username</th>
                                             <th>Email</th>
                                             <th>Role</th>
                                             <th>Created At</th>

@@ -12,6 +12,31 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function home()
+    {
+        return view('home');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function categories()
+    {
+        return view('categories');
+    }
+
+    public function faq()
+    {
+        return view('faq');
+    }
+
     public function dashboard()
     {
         $posts = Post::all();

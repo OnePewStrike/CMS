@@ -12,7 +12,7 @@
 
 <body>
     <!-- Header Section  -->
-    <section class="header login">
+    <section class="header login custom-pad-guest">
         <div class="left-content">
             <a href="main.html">
                 <h3 class="logo" style="color: #1E3231;">Honghong</h3>

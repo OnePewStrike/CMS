@@ -1,16 +1,18 @@
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">Honghong</a>
-    <!-- Sidebar Toggle-->
-    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" style="font-" id="sidebarToggle" href="#!"><i
-            class="fas fa-bars"></i></button>
-    <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0" style="color: #8E7C93;">
-        {{ Auth::user()->name }}
-    </form>
-    <!-- Navbar-->
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-        <li class="nav-item dropdown" style="margin-top: 2px;">
+<section class="header custom-pad-user">
+    <div class="left-content">
+        <a href="home.html">
+            <h3 class="logo">Honghong</h3>
+        </a>
+        <ul class="nav-links">
+            <li><a href="home.html" style="color: #fff;">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="categories.html ">Categories</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+        </ul>
+    </div>
+    <div class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown" style="margin-top: 5px;">
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -28,5 +30,5 @@
                 </form>
             </div>
         </li>
-    </ul>
-</nav>
+    </div>
+</section>
