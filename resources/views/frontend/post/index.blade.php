@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', "$category->name")
 
 @section('content')
+
     <!-- Home Introduction Banner Section -->
     <section class="home-intro-banner">
         <h2> Anonymous Confession Vault</h2>
@@ -52,46 +53,32 @@
     <!-- Content Post Section  -->
     <section class="post-container">
         <div class="wrapper-post">
-            <div class="content-col">
-                <h3>created_at</h3>
-                <div class="content">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, reiciendis. Repudiandae porro
-                        aspernatur deleniti consequuntur?
-                    </p>
-                </div>
-                <div class="actions">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-comment"></i>
-                </div>
-                <div class="user-details">
-                    <h3 class="user-name">user_name</h3>
-                    <h3 class="category-name">category_name</h3>
-                </div>
-            </div>
+            @forelse ($post as $postitem)
+                <a href="{{ url('category/' . $category->name . '/' . $postitem->name) }}">
+                    <div class="content-col">
+                        <h3>{{ $category->created_at->format('m-d-Y') }}</h3>
+                        <div class="content">
+                            <p>
+                                {{ $postitem->description }}
+                            </p>
+                        </div>
+                        <div class="actions">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="user-details">
+                            <h3 class="user-name">{{ $postitem->user->name }}</h3>
+                            <h3 class="category-name">{{ $category->name }}</h3>
+                        </div>
+                    </div>
+                </a>
+            @empty
+                <h5>No Post Available</h5>
+            @endforelse
+        </div>
+        <div class="paginate">
+            {{ $post->links() }}
         </div>
     </section>
 
 @endsection
-
-{{-- @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        {{ __('You are logged in!') }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}

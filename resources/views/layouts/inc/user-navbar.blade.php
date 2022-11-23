@@ -1,14 +1,14 @@
 <section class="header custom-pad-user">
     <div class="left-content">
-        <a href="home.html">
+        <a href="{{ url('home') }}">
             <h3 class="logo">Honghong</h3>
         </a>
         <ul class="nav-links">
-            <li><a href="home.html" style="color: #fff;">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="categories.html ">Categories</a></li>
-            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="{{ url('home') }}">Home</a></li>
+            <li><a href="{{ url('about') }}">About</a></li>
+            <li><a href="{{ url('contact') }}">Contact</a></li>
+            <li><a href="{{ url('categories') }}">Categories</a></li>
+            <li><a href="{{ url('faq') }}">FAQs</a></li>
         </ul>
     </div>
     <div class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -30,5 +30,28 @@
                 </form>
             </div>
         </li>
+    </div>
+</section>
+
+<!-- Sub-header Section  -->
+<section class="sub-header">
+    <div class="left-content">
+        @php
+            $categories = App\Models\Category::where('navbar_status', '0')
+                ->where('status', '0')
+                ->get();
+        @endphp
+        @foreach ($categories as $cateitem)
+            <div class="content-col">
+                <button>
+                    <a href="{{ url('category/' . $cateitem->name) }}"> {{ $cateitem->name }}</a>
+                </button>
+            </div>
+        @endforeach
+    </div>
+    <div class="right-content">
+        {{-- <div class="breadcrumbs">
+            <a href="home.html">Home</a>
+        </div> --}}
     </div>
 </section>

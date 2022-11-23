@@ -1287,9 +1287,9 @@ hr {
   display: flex;
   flex-direction: row;
 }
-
-.pc-container .row .content-col i {
-  font-size: 35px;
+.pc-container .row .content-col .icon .fa-user {
+  font-size: 22px;
+  color: #1E3231;
 }
 
 .pc-container .row .content-col .icon {
@@ -1305,9 +1305,10 @@ hr {
 }
 
 .pc-container .row .content-col h3 {
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 400;
   margin-left: 15px;
+  margin-top: 8px;
 }
 
 .pc-container .horizontal-line {
@@ -1561,20 +1562,37 @@ hr {
 
 .post-container .wrapper-post {
     display: flex;
+    flex-direction: column;
     margin: 20px auto;
-    width: 330px;
     justify-content: center;
     align-items: center;
+    width: 150px;
+}
+
+.post-container .paginate {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.post-container .wrapper-post a {
+    text-decoration: none;
+    color: #1E3231;
 }
 
 .post-container .wrapper-post .content-col {
     padding: 2%;
+    height: 350px;
+    width: 300px;
     justify-content: left;
     align-items: left;
     border: 2px solid #1E3231;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     margin-right: 20px;
+    color: #F6C0D0;
 }
 
 .post-container .wrapper-post .content-col:hover {
@@ -1582,6 +1600,7 @@ hr {
 }
 
 .post-container .wrapper-post .content-col h3 {
+    color: #1E3231;
     font-weight: 400;
     margin-top: 10px;
     font-size: 16px;
@@ -1589,8 +1608,10 @@ hr {
 
 .post-container .wrapper-post .content-col .content {
     padding: 1%;
+    height: 220px;
     text-align: center;
     border: 2px solid #1E3231;
+    color: #1E3231;
 }
 
 .post-container .wrapper-post .content-col .content p {

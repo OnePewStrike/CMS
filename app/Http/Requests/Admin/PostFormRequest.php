@@ -32,28 +32,8 @@ class PostFormRequest extends FormRequest
                 'required',
                 'string'
             ],
-            'slug' => [
-                'required',
-                'string'
-            ],
             'description' => [
                 'required'
-            ],
-            'yt_iframe' => [
-                'nullable',
-                'string'
-            ],
-            'meta_title' => [
-                'required',
-                'string'
-            ],
-            'meta_description' => [
-                'nullable',
-                'string'
-            ],
-            'meta_keyword' => [
-                'nullable',
-                'string'
             ],
             'status' => [
                 'nullable'

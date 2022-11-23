@@ -29,30 +29,12 @@ class CategoryFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'slug' => [
-                'required',
-                'string',
-                'max:200'
-            ],
             'description' => [
                 'required'
             ],
             'image' => [
                 'nullable',
-                'mimes:jpeg,jpg,png'
-            ],
-            'meta_title' => [
-                'required',
-                'string',
-                'max:200'
-            ],
-            'meta_description' => [
-                'required',
-                'string'
-            ],
-            'meta_keyword' => [
-                'required',
-                'string'
+                'mimes:jpeg,jpg,png,svg'
             ],
             'navbar_status' => [
                 'nullable'

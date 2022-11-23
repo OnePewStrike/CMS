@@ -25,7 +25,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// FrontEnd Controller Roues
 Route::get('/home', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index']);
+Route::get('/about', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'about']);
+Route::get('/contact', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'contact']);
+Route::get('/categories', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'categories']);
+Route::get('/faq', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'faq']);
+Route::get('category/{category_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewCategoryPost']);
+Route::get('category/{category_name}/{post_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewPost']);
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // Dashboard Controller Routes

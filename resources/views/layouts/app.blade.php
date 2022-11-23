@@ -22,6 +22,16 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+    <style>
+        .page-item.active .page-link {
+            background-color: #1E3231;
+            border-color: #1E3231;
+        }
+
+        .page-link {
+            color: #1E3231;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,9 +41,9 @@
         @include('layouts.inc.user-navbar')
     @endguest
 
-
     @yield('content')
 
+    @include('layouts.inc.footer')
 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/js/script.js') }}" crossorigin="anonymous"></script>
