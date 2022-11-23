@@ -17,14 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('category_id');
             $table->string('name');
-            $table->string('slug');
             $table->mediumText('description');
-
-            $table->string('yt_iframe')->nullable();
-
-            $table->string('meta_title');
-            $table->mediumText('meta_description')->nullable();
-            $table->mediumText('meta_keyword')->nullable();
 
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');

@@ -682,7 +682,7 @@ hr {
 }
 
 .footer .row {
-  margin-left: 230px;
+  margin-left: 150px;
   display: flex;
   align-items: center;
   padding-top: 130px;
@@ -723,8 +723,8 @@ hr {
   display: flex;
 }
 
-.footer-details .left-content i {
-  margin: 10px 5px;
+.footer-details .left-content .fa-copyright {
+  margin: 6px 5px;
   font-size: 10px;
 }
 
@@ -762,7 +762,7 @@ hr {
   background-color: #d9d9d9;
 }
 
-.footer-details .right-content .icon i {
+.footer-details .right-content .icon .fa-facebook-f, .fa-instagram, .fa-twitter {
   font-size: 12px;
 }
 
@@ -1559,7 +1559,7 @@ hr {
     align-items: center;
 }
 
-.wrapper-post {
+.post-container .wrapper-post {
     display: flex;
     margin: 20px auto;
     width: 330px;
@@ -1567,36 +1567,43 @@ hr {
     align-items: center;
 }
 
-.wrapper-post .content-col {
+.post-container .wrapper-post .content-col {
     padding: 2%;
     justify-content: left;
     align-items: left;
     border: 2px solid #1E3231;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
-.wrapper-post .content-col h3 {
+.post-container .wrapper-post .content-col:hover {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+
+.post-container .wrapper-post .content-col h3 {
     font-weight: 400;
     margin-top: 10px;
     font-size: 16px;
 }
 
-.wrapper-post .content-col .content {
+.post-container .wrapper-post .content-col .content {
     padding: 1%;
     text-align: center;
     border: 2px solid #1E3231;
 }
 
-.wrapper-post .content-col .content p {
+.post-container .wrapper-post .content-col .content p {
     font-size: 22px;
 }
 
-.wrapper-post .content-col .actions {
+.post-container .wrapper-post .content-col .actions {
     margin-top: 8px;
     margin-left: 8px;
     display: flex;
 }
 
-.wrapper-post .content-col .actions .fa-heart {
+.post-container .wrapper-post .content-col .actions .fa-heart {
     margin-right: 10px;
     font-size: 32px;
     color: #1E3231;
@@ -1604,11 +1611,11 @@ hr {
     transition: all 0.5s ease 0s;
 }
 
-.wrapper-post .content-col .actions .fa-heart:hover {
+.post-container .wrapper-post .content-col .actions .fa-heart:hover {
     color: #8E7C93;
 }
 
-.wrapper-post .content-col .actions .fa-comment {
+.post-container .wrapper-post .content-col .actions .fa-comment {
     margin-right: 10px;
     font-size: 32px;
     color: #1E3231;
@@ -1616,26 +1623,26 @@ hr {
     transition: all 0.5s ease 0s;
 }
 
-.wrapper-post .content-col .actions .fa-comment:hover {
+.post-container .wrapper-post .content-col .actions .fa-comment:hover {
     color: #8E7C93;
 }
 
-.wrapper-post .content-col .user-details {
+.post-container .wrapper-post .content-col .user-details {
     display: flex;
     justify-content: space-between;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.wrapper-post .content-col .user-details h3 {
+.post-container .wrapper-post .content-col .user-details h3 {
     font-size: 16px;
 }
 
-.wrapper-post .content-col .user-details h3.user-name {
+.post-container .wrapper-post .content-col .user-details h3.user-name {
     font-weight: 600;
 }
 
-.wrapper-post .content-col .user-details h3.category-name {
+.post-container .wrapper-post .content-col .user-details h3.category-name {
     font-style: italic;
 }
 

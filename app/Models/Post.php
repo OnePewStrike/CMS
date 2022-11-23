@@ -14,12 +14,7 @@ class Post extends Model
 
     protected $fillable = [
         'category_id',
-        'slug',
         'description',
-        'yt_iframe',
-        'meta_title',
-        'meta_description',
-        'meta_keyword',
         'status',
         'created_by'
     ];

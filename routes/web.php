@@ -18,18 +18,14 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/about', [App\Http\Controllers\Admin\PostController::class, 'about']);
-// Route::get('/contact', [App\Http\Controllers\Admin\PostController::class, 'contact']);
-// Route::get('/categories', [App\Http\Controllers\Admin\PostController::class, 'categories']);
-// Route::get('/faq', [App\Http\Controllers\Admin\PostController::class, 'faq']);
+Route::get('/home', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index']);
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // Dashboard Controller Routes
