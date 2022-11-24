@@ -589,6 +589,25 @@ hr {
   text-align: left;
 }
 
+/* About Introduction  */
+.about-container {
+    margin: 15px auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.about-container header {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 24px;
+}
+
 /* Team Section  */
 .team-container {
   width: 100%;
@@ -598,7 +617,7 @@ hr {
 
 .team-container header {
   font-size: 48px;
-  font-weight: 600;
+  margin-top: 20px;
 }
 
 .team-container .row {
@@ -651,7 +670,7 @@ hr {
 }
 /* Join Section  */
 .join {
-  margin: 30px auto;
+  margin: 50px auto;
   background-color: #1E3231;
   background-position: center;
   background-size: cover;

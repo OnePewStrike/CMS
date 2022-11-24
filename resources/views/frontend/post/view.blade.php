@@ -51,7 +51,7 @@
     <!-- Comments Section  -->
     <section class="ms-container">
         <div class="header-details">
-            <h1># Comments</h1>
+            <h1>Comments</h1>
         </div>
         @if (session('message'))
             <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
