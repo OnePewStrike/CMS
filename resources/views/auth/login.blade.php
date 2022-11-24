@@ -5,6 +5,9 @@
         <div class="wrapper">
             <div class="form signup">
                 <header>Login to Honghong</header>
+                @if (session('message'))
+                    <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
+                @endif
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="field input">

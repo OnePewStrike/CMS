@@ -52,13 +52,51 @@
     <section class="ms-container">
         <div class="header-details">
             <h1># Comments</h1>
-            <button class="btn btn-border-md" id="openComment">Leave a Comment</button>
         </div>
+        @if (session('message'))
+            <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
+        @endif
         <div class="row">
-            <div class="content-col"></div>
-            <div class="content-col"></div>
-            <div class="content-col"></div>
+            <div class="content-col shadow-sm">
+                <form action="{{ url('comments') }}" method="POST">
+                    @csrf
+                    <h6>Leave a Comment</h6>
+                    <input type="hidden" name="post_name" value="{{ $post->name }}">
+                    <textarea name="comment_body" rows="3" class="form-control"></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+
+            </div>
         </div>
+
+        <div class="row">
+            @forelse ($post->comments as $comment)
+                <div class="comment-container content-col shadow-sm">
+                    <h6 class="user-name mb-1">
+                        @if ($comment->user)
+                            {{ $comment->user->name }}
+                        @endif
+                        <small class="ms-3 text-primary">
+                            Commented on: {{ $comment->created_at->format('d-m-Y') }}
+                        </small>
+                    </h6>
+                    <p class="user-comment mb-1">
+                        {!! $comment->comment_body !!}
+                    </p>
+                    {{-- @if (Auth::check() && Auth::id() == $comment->user_id)
+                        <div>
+                            <button type="button" href="#" value="{{ $comment->id }}"
+                                class="btn btn-quinary mb-2 deleteComment">Delete</button>
+                        </div>
+                    @endif --}}
+                </div>
+
+            @empty
+                <h6>No Comments Found</h6>
+            @endforelse
+        </div>
+
+
         <div class="action">
             <button class="btn btn-border-md">Show More</button>
         </div>
@@ -84,4 +122,43 @@
             </div>
         </section>
     </section>
+@endsection
+
+@section('scripts')
+
+    <script>
+        $(document).ready(function() {
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $(document).on('click', '.deleteComment', function() {
+
+                if (confirm('Are you sure you want to delete this comment?')) {
+                    var thisClicked = $(this);
+                    var comment_id = thisClicked.val();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/delete-comment",
+                        data: {
+                            'comment_id': comment_id
+                        },
+                        success: function(res) {
+                            if (res.status == 200) {
+                                thisClicked.closest('.comment-container').remove();
+                                alert(res.message);
+                            } else {
+                                alert(res.message);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
 @endsection

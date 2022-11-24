@@ -3,9 +3,60 @@
 @section('title', 'Dashboard')
 
 @section('content')
+
     <div class="db-container">
         <h1>Collection of Records</h1>
-        <h5>Here's the list of records</h5>
+        <h5>Here's the latest list of records</h5>
+        <div class="row mt-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-custom  text-white mb-4" style="background:#485665;">
+                    <div class="card-body" style="color:#F6C0D0;">
+                        Total Categories
+                        <h2>{{ $category_count }}</h2>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a href="{{ url('admin/category') }}" class="small text-white stretched-link">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-custom text-white mb-4">
+                    <div class="card-body" style="color:#F6C0D0;">
+                        Total Posts
+                        <h2>{{ $post_count }}</h2>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a href="{{ url('admin/posts') }}" class="small text-white stretched-link">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-custom  text-white mb-4">
+                    <div class="card-body" style="color:#F6C0D0;">
+                        Total Users
+                        <h2>{{ $user_count }}</h2>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a href="{{ url('admin/users') }}" class="small text-white stretched-link">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-custom  text-white mb-4">
+                    <div class="card-body" style="color:#F6C0D0;">
+                        Total Admins
+                        <h2>{{ $admin_count }}</h2>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a href="{{ url('admin/users') }}" class="small text-white stretched-link">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="tb-wrapper">
             <div class="row_head">
                 <span class="row_toggle is-active">Categories</span>
