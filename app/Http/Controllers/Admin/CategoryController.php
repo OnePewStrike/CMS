@@ -29,11 +29,12 @@ class CategoryController extends Controller
         $category->name = $data['name'];
         $category->description = $data['description'];
 
+        $uploadPath = 'uploads/category/';
         if ($request->hasfile('image')) {
             $file = $request->file('image');
             $filename = time() . '.' .  $file->getClientOriginalExtension();
             $file->move('uploads/category/', $filename);
-            $category->image = $filename;
+            $category->image = $uploadPath . $filename;
         }
 
         $category->navbar_status = $request->navbar_status == true ? '1' : '0';

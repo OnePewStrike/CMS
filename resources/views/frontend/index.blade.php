@@ -34,6 +34,23 @@
         </div>
     </section>
 
+    <!-- Content Collection Section  -->
+    <section class="collection">
+        <h1>Latest Posts</h1>
+        <div class="row">
+            @foreach ($latest_posts as $latest_post_item)
+                <div class="col md-4">
+                    <div class="card card-body mb-3">
+                        <a href="{{ url('category/' . $latest_post_item->$category->name . '/' . $latest_post_item->name) }}"
+                            class="text-decoration-none">
+                            <h5 class="text-dark mb-0">{{ $latest_post_item->name }}</h5>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
     <!-- Content Banner Section  -->
     <section class="banner-container">
         <div class="banner">
@@ -63,58 +80,18 @@
     <!-- Content Collection Section  -->
     <section class="collection">
         <h1>Check Our Collection</h1>
-        <p class="message">See all of them? <a href="categories.html">Categories</a></p>
+        <p class="message">See all of them? <a href="{{ url('categories') }}">Categories</a></p>
         <div class="row">
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
-            <div class="content-col">
-                <h3>Category Name</h3>
-                <p># of collection</p>
-            </div>
+            @foreach ($all_categories as $all_cateitem)
+                <div class="col-md-4">
+                    <div class="content mb-3">
+                        <a href="{{ url('category/' . $all_cateitem->name) }}" class="text-decoration-none">
+                            <h5 class="text-dark mb-0">{{ $all_cateitem->name }}</h5>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
 
-
 @endsection
-
-{{-- @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        {{ __('You are logged in!') }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}

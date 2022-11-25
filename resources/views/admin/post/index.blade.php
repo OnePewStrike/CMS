@@ -39,7 +39,7 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->status == '1' ? 'Hidden' : 'Shown' }}</td>
                                 <td>
-                                    <a href=" {{ url('admin/post/' . $item->id) }}" class="btn btn-success"><i
+                                    <a href=" {{ url('admin/edit-post/' . $item->id) }}" class="btn btn-success"><i
                                             class="fa-solid fa-pen-to-square"></i></a>
                                     <a href=" {{ url('admin/delete-post/' . $item->id) }}" class="btn btn-danger"><i
                                             class="fa-solid fa-trash"></i></a>

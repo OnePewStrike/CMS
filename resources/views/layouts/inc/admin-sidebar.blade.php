@@ -2,7 +2,7 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <div class="sb-sidenav-menu-heading mt-4" style="background: #8E7C93; color: #1E3231;">Core</div>
+                <div class="sb-sidenav-menu-heading" style="background: #8E7C93; color: #1E3231;">Core</div>
                 <a class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}"
                     href="{{ url('admin/dashboard') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -26,16 +26,20 @@
                             href=" {{ url('admin/category') }} ">View Category</a>
                     </nav>
                 </div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost"
-                    aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link {{ Request::is('admin/posts') || Request::is('admin/add-post') || Request::is('admin/edit-post/*') ? 'active' : '' }} ? 'collapse active':'collapsed' }}"
+                    href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false"
+                    aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-pen-nib"></i></div>
                     Posts
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapsePost" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <div class="collapse {{ Request::is('admin/posts') || Request::is('admin/add-post') || Request::is('admin/edit-post/*') ? 'active' : '' }} ? 'show':'' }}"
+                    id="collapsePost" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href=" {{ url('admin/add-post') }} ">Add Post</a>
-                        <a class="nav-link" href=" {{ url('admin/posts') }} ">View Post</a>
+                        <a class="nav-link {{ Request::is('admin/add-post') ? 'active' : '' }}"
+                            href=" {{ url('admin/add-post') }} ">Add Post</a>
+                        <a class="nav-link {{ Request::is('admin/posts') || Request::is('admin/edit-post/*') ? 'active' : '' }}"
+                            href=" {{ url('admin/posts') }} ">View Post</a>
                     </nav>
                 </div>
 

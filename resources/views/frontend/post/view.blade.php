@@ -83,12 +83,12 @@
                     <p class="user-comment mb-1">
                         {!! $comment->comment_body !!}
                     </p>
-                    {{-- @if (Auth::check() && Auth::id() == $comment->user_id)
+                    @if (Auth::check() && Auth::id() == $comment->user_id)
                         <div>
                             <button type="button" href="#" value="{{ $comment->id }}"
                                 class="btn btn-quinary mb-2 deleteComment">Delete</button>
                         </div>
-                    @endif --}}
+                    @endif
                 </div>
 
             @empty

@@ -12,38 +12,17 @@
             arcu, quis lobortis. </p>
         <div class="container">
             <div class="row">
-                <div class="row-col">
-                    <i class="fa-solid fa-heart"></i>
-                    <h5>Love+Relationships</h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
-                <div class="row-col">
-                    <i class="fa-solid fa-book-skull"></i>
-                    <h5>Confession+Secrets</h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
-                <div class="row-col">
-                    <i class="fa-solid fa-face-angry"></i>
-                    <h5>Hate </h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="row-col">
-                    <i class="fa-solid fa-microphone"></i>
-                    <h5>Opinion</h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
-                <div class="row-col">
-                    <i class="fa-solid fa-landmark"></i>
-                    <h5>Political</h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
-                <div class="row-col">
-                    <i class="fa-solid fa-ghost"></i>
-                    <h5>Scary</h5>
-                    <a href="#"> <button class="btn btn-primary">Select</button></a>
-                </div>
+                @foreach ($categories as $cateitem)
+                    <div class="row-col">
+                        <img src="{{ asset("$cateitem->image") }}" alt="">
+                        <h5>{{ $cateitem->name }}</h5>
+                        <a href="{{ url('category/' . $cateitem->name) }}">
+                            <button class="btn btn-primary">
+                                Select
+                            </button>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

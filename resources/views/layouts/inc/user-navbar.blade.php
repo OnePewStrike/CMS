@@ -4,11 +4,21 @@
             <h3 class="logo">Honghong</h3>
         </a>
         <ul class="nav-links">
-            <li><a href="{{ url('home') }}">Home</a></li>
-            <li><a href="{{ url('about') }}">About</a></li>
-            <li><a href="{{ url('contact') }}">Contact</a></li>
-            <li><a href="{{ url('categories') }}">Categories</a></li>
-            <li><a href="{{ url('faq') }}">FAQs</a></li>
+            <li class="{{ Request::is('home') ? 'active' : '' }}">
+                <a href="{{ url('home') }}">Home</a>
+            </li>
+            <li class="{{ Request::is('about') ? 'active' : '' }}">
+                <a href="{{ url('about') }}">About</a>
+            </li>
+            <li class="{{ Request::is('contact') ? 'active' : '' }}">
+                <a href="{{ url('contact') }}">Contact</a>
+            </li>
+            <li class="{{ Request::is('categories') ? 'active' : '' }}">
+                <a href="{{ url('categories') }}">Categories</a>
+            </li>
+            <li class="{{ Request::is('faq') ? 'active' : '' }}">
+                <a href="{{ url('faq') }}">FAQs</a>
+            </li>
         </ul>
     </div>
     <div class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -44,6 +54,7 @@
         @foreach ($categories as $cateitem)
             <div class="content-col">
                 <button>
+                    <img src="{{ asset("$cateitem->image") }}" alt="">
                     <a href="{{ url('category/' . $cateitem->name) }}"> {{ $cateitem->name }}</a>
                 </button>
             </div>

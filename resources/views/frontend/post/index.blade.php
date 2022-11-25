@@ -6,8 +6,8 @@
 
     <!-- Home Introduction Banner Section -->
     <section class="home-intro-banner">
-        <h2> Anonymous Confession Vault</h2>
-        <p> Post your darkest secrets, your untold confessions, or your unrevealed thoughts</p>
+        <h2> Lorem ipsum dolor. </h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat. </p>
         <button type="submit" class="btn btn-primary" id="openPost" style="padding: 8px 40px 8px 40px;">Post</button>
 
         <!-- Post Pop-Up Section  -->
@@ -52,33 +52,31 @@
 
     <!-- Content Post Section  -->
     <section class="post-container">
-        <div class="wrapper-post">
-            @forelse ($post as $postitem)
-                <a href="{{ url('category/' . $category->name . '/' . $postitem->name) }}">
-                    <div class="content-col">
-                        <h3>{{ $category->created_at->format('m-d-Y') }}</h3>
-                        <div class="content">
-                            <p>
-                                {{ $postitem->description }}
-                            </p>
+        <div class="row">
+            @foreach ($post as $postitem)
+                <div class="wrapper-post">
+                    <a href="{{ url('category/' . $category->name . '/' . $postitem->name) }}">
+                        <div class="content-col">
+                            <h3>{{ $category->created_at->format('m-d-Y') }}</h3>
+                            <div class="content">
+                                <p>
+                                    {{ $postitem->description }}
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">{{ $postitem->user->name }}</h3>
+                                <h3 class="category-name">{{ $category->name }}</h3>
+                            </div>
                         </div>
-                        <div class="actions">
-                            <i class="fa-solid fa-heart"></i>
-                            <i class="fa-solid fa-comment"></i>
-                        </div>
-                        <div class="user-details">
-                            <h3 class="user-name">{{ $postitem->user->name }}</h3>
-                            <h3 class="category-name">{{ $category->name }}</h3>
-                        </div>
-                    </div>
-                </a>
-            @empty
-                <h5>No Post Available</h5>
-            @endforelse
-        </div>
-        <div class="paginate">
-            {{ $post->links() }}
-        </div>
+                    </a>
+                </div>
+            @endforeach
+            <div class="paginate">
+                {{ $post->links() }}
+            </div>
     </section>
 
 @endsection

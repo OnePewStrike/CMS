@@ -79,7 +79,7 @@
         <h2>Still have questions?</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ullam possimus accusantium? <br> Labore
             ducimus numquam vitae sequi dicta illum voluptas!</p>
-        <a href="contact.html"><button class="btn btn-primary">Contact Us</button></a>
+        <a href="{{ url('contact') }}"><button class="btn btn-primary">Contact Us</button></a>
     </section>
     <script src="app.js"></script>
 @endsection

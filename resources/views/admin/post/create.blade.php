@@ -19,7 +19,7 @@
 
             <div class="card-header">
                 <h4>Add Posts
-                    <a href="{{ url('admin/add-post') }}" class="btn btn-primary float-end">Add Posts</a>
+                    <a href="{{ url('admin/posts') }}" class="btn btn-danger float-end">Go Back</a>
                 </h4>
 
             </div>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary float-end">Save Post</button>
+                                <button type="submit" class="btn btn-primary float-end mb-3">Save Post</button>
                             </div>
                         </div>
                     </div>

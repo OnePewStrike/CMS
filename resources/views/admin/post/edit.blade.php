@@ -10,8 +10,8 @@
         <div class="card mt-4">
 
             <div class="card-header">
-                <h4>Edit Posts
-                    <a href="{{ url('admin/posts/') }}" class="btn btn-danger float-end">BACK</a>
+                <h4>Update Post
+                    <a href="{{ url('admin/posts') }}" class="btn btn-danger float-end">Go Back</a>
                 </h4>
 
             </div>
@@ -51,7 +51,6 @@
                         <textarea name="description" rows="5" class="form-control">{!! $post->description !!}</textarea>
                     </div>
 
-                    <h4>Status</h4>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-3">
@@ -61,7 +60,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary float-end">Update Post</button>
+                                <button type="submit" class="btn btn-primary float-end mb-3">Update Post</button>
                             </div>
                         </div>
                     </div>

@@ -26,7 +26,7 @@ Route::get('/', function () {
 Auth::routes();
 
 // FrontEnd Controller Routes
-Route::get('/home', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'about']);
 Route::get('/contact', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'contact']);
 Route::get('/categories', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'categories']);
@@ -54,7 +54,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('posts', [App\Http\Controllers\Admin\PostController::class, 'index']);
     Route::get('add-post', [App\Http\Controllers\Admin\PostController::class, 'create']);
     Route::post('add-post', [App\Http\Controllers\Admin\PostController::class, 'store']);
-    Route::get('post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
+    Route::get('edit-post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'edit']);
     Route::put('update-post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
     Route::get('delete-post/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'delete']);
 

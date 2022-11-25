@@ -9,7 +9,9 @@
         <div class="card mt-4">
             <div class="card-header">
 
-                <h4 class=""> Edit Category </h4>
+                <h4>Update Category
+                    <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Go Back</a>
+                </h4>
 
             </div>
             <div class="card-body">
@@ -40,7 +42,6 @@
                         <input type="file" name="image" class="form-control">
                     </div>
 
-                    <h6> Status Mode </h6>
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label> Navbar Status </label>
@@ -52,7 +53,7 @@
                             <input type="checkbox" name="status" {{ $category->status == '1' ? 'checked' : '' }} />
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary"> Update Category </button>
+                            <button type="submit" class="btn btn-primary float-end mb-3"> Update Category </button>
                         </div>
                     </div>
 
