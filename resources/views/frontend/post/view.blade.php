@@ -8,13 +8,13 @@
     <section class="pc-container">
 
         <div class="row">
-            <div class="content-col">
+            <div class="content-col" style="margin-right: -60px;">
                 <div class="icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <h3>{!! $post->user->name !!}</h3>
             </div>
-            <div class="content-col">
+            <div class="content-col" style="margin-right: -30px;">
                 <div class="icon">
                     <i class="fa-solid fa-clock"></i>
                 </div>
@@ -57,7 +57,7 @@
             <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
         @endif
         <div class="row">
-            <div class="content-col shadow-sm">
+            <div class="content-col">
                 <form action="{{ url('comments') }}" method="POST">
                     @csrf
                     <h6>Leave a Comment</h6>
@@ -71,23 +71,22 @@
 
         <div class="row">
             @forelse ($post->comments as $comment)
-                <div class="comment-container content-col shadow-sm">
+                <div class="comment-container content-col custom-size">
                     <h6 class="user-name mb-1">
                         @if ($comment->user)
                             {{ $comment->user->name }}
                         @endif
                         <small class="ms-3 text-primary">
-                            Commented on: {{ $comment->created_at->format('d-m-Y') }}
+                            date commented: {{ $comment->created_at->format('d-m-Y') }}
                         </small>
                     </h6>
-                    <p class="user-comment mb-1">
+                    <p class="user-comment mb-3">
                         {!! $comment->comment_body !!}
                     </p>
                     @if (Auth::check() && Auth::id() == $comment->user_id)
-                        <div>
-                            <button type="button" href="#" value="{{ $comment->id }}"
-                                class="btn btn-quinary mb-2 deleteComment">Delete</button>
-                        </div>
+                        <p type="button" value="{{ $comment->id }}" class="btn-quinary deleteComment">
+                            Delete
+                        </p>
                     @endif
                 </div>
 
@@ -97,30 +96,10 @@
         </div>
 
 
-        <div class="action">
+        {{-- <div class="action">
             <button class="btn btn-border-md">Show More</button>
-        </div>
+        </div> --}}
 
-        <!-- Post Comment Pop-Up Section  -->
-        <section class="cpop-container" id="comment">
-            <div class="content-cpop" id="cpopup">
-                <form action="#">
-                    <div class="header">
-                        <h2>Leave a Comment</h2>
-                        <label for="click" class="fas fa-times" id="closeComment"></label>
-                    </div>
-
-                    <div class="content-row">
-                        <h3>Your Comment</h3>
-                        <textarea required="required" class="box"></textarea>
-                    </div>
-
-                    <div class="content-btn">
-                        <button type="button" class="btn btn-border">Post Content</button>
-                    </div>
-                </form>
-            </div>
-        </section>
     </section>
 @endsection
 

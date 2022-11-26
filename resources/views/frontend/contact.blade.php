@@ -8,7 +8,7 @@
     <div class="contact-container">
         <h2>Get in Touch</h2>
         <div class="row">
-            <div class="contact-col">
+            <div class="contact-col border-right">
                 <form action="#" method="post">
                     <h3>Send us a message</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Etiam tempus turpis a est porta
@@ -35,7 +35,7 @@
                     </div>
                 </form>
             </div>
-            <div class="vertical-line"></div>
+            {{-- <div class="vertical-line"></div> --}}
             <div class="contact-col">
                 <h3>Email Us</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit.</p>

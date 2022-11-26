@@ -81,5 +81,4 @@
             ducimus numquam vitae sequi dicta illum voluptas!</p>
         <a href="{{ url('contact') }}"><button class="btn btn-primary">Contact Us</button></a>
     </section>
-    <script src="app.js"></script>
 @endsection

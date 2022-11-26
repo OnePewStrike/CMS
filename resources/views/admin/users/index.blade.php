@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Userame</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
                             <th>Actions</th>

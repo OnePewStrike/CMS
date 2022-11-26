@@ -41,11 +41,18 @@ class CommentController extends Controller
     {
         if (Auth::check()) {
             $comment = Comment::where('id', $request->comment->id)->where('user_id', Auth::user()->id)->first();
-            $comment->delete();
-            return response()->json([
-                'status' => 200,
-                'message' => 'Comment deleted successfully'
-            ]);
+            if ($comment) {
+                $comment->delete();
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Comment deleted successfully'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => 'Something went wrong'
+                ]);
+            }
         } else {
             return response()->json([
                 'status' => 401,

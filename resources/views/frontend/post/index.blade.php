@@ -15,8 +15,15 @@
             <div class="content-pop" id="popup">
                 <form action="#">
                     <div class="header">
-                        <h2>Post Your Content</h2>
-                        <label for="click" class="fas fa-times" id="closePost"></label>
+                        <h2>Post Your Confession</h2>
+                        <button id="closePost"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="content-row">
+                        <div class="content-title">
+                            <h3>Category Name</h3>
+                        </div>
+                        <textarea required="required" class="category"></textarea>
                     </div>
 
                     <div class="content-row">
@@ -33,7 +40,7 @@
                         <textarea required="required" class="message"></textarea>
                     </div>
                     <div class="content-btn">
-                        <button type="button" class="btn btn-border">Post Content</button>
+                        <button type="button" class="btn btn-primary">Post</button>
                     </div>
                 </form>
             </div>
@@ -42,8 +49,8 @@
 
     <!-- Standard Search Bar Section  -->
     <section class="search-container">
-        <form action="#">
-            <input type="text" placeholder="Search by Name" name="Search">
+        <form role="search" action="{{ url('search') }}" method="GET">
+            <input type="search" placeholder="Search by Name" name="search">
             <button type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>

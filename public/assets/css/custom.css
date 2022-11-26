@@ -53,8 +53,7 @@ button {
 .btn-quarternary {
   background-color: #485665;
   color: #fff;
-  border-radius: 7px;
-  font-size: 14px;
+  border-radius: 7px;  font-size: 14px;
   transition: all 0.3s ease 0s;
 }
 
@@ -317,8 +316,8 @@ hr {
 
 .sub-header .left-content button img {
     object-fit: cover;
-    height: 19px;
-    width: 19px;
+    height: 21px;
+    width: 21px;
     margin: 0 7px 5px 0;
 }
 
@@ -342,7 +341,7 @@ hr {
   margin-left: 2px;
   text-decoration: none;
   color: #26272c;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .sub-header .right-content .about-crumbs{
@@ -420,19 +419,18 @@ hr {
   margin-left: 15px;
 }
 
-.intro .left-intro .lower-content .links i {
-  font-size: 32px;
-}
-
-.intro .left-intro .lower-content .links i.fa-facebook {
+.intro .left-intro .lower-content .links .fa-facebook {
+  font-size: 24px;
   color: #4267B2;
 }
 
-.intro .left-intro .lower-content .links i.fa-instagram {
+.intro .left-intro .lower-content .links .fa-instagram {
+  font-size: 24px;
   color: #8E7C93;
 }
 
-.intro .left-intro .lower-content .links i.fa-twitter {
+.intro .left-intro .lower-content .links .fa-twitter {
+  font-size: 24px;
   color: #1DA1F2;
 }
 
@@ -474,7 +472,7 @@ hr {
   display: flex;
   padding: 0;
   margin-left: 40px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .banner .left-content header {
@@ -483,7 +481,7 @@ hr {
   margin-left: 20px;
 }
 
-.banner .left-content .detail-row i {
+.banner .left-content .detail-row .fa-circle-check {
   font-size: 45px;
 }
 
@@ -1133,17 +1131,19 @@ hr {
 
 .pstp-container .content-pop {
   width: 420px;
-  height: 500px;
-  background: #D9D9D9;
+  height: 620px;
   border-radius: 5px;
+  background: #fff;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+  border: 1px solid #1E3231;
   z-index: 2;
 }
 
 .pstp-container .content-pop form .header {
+  position: relative;
   padding: 20px 20px 10px 20px;
   height: 68px;
-  background: #24252A;
+  background: #1E3231;
   color: #fff;
   border-radius: 3px 3px 0 0;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
@@ -1154,13 +1154,22 @@ hr {
   font-weight: 400;
 }
 
-.pstp-container .content-pop form .header .fa-times {
-  font-size: 20px;
-  cursor: pointer;
+.pstp-container .content-pop form .header button {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    font-size: 22px;
+    background: #1E3231;
+    color: #fff;
 }
 
 .pstp-container .content-pop form .content-row {
-  margin: 10px 0 0 0px;
+  margin: 20px 0 0 0px;
+}
+
+.pstp-container .content-pop form .content-row textarea {
+    border: 1px solid #1e321e;
+    border-radius: 10px;
 }
 
 .pstp-container .content-pop form .content-row .content-title {
@@ -1171,7 +1180,6 @@ hr {
 
 .pstp-container .content-pop form .content-row h3 {
   font-size: 16px;
-  font-weight: 400;
 }
 
 .pstp-container .content-pop form .content-row textarea.title {
@@ -1179,6 +1187,14 @@ hr {
   height: 60px;
   font-size: 16px;
   margin: 10px 0 0 5px;
+  resize: none;
+}
+
+.pstp-container .content-pop form .content-row textarea.category {
+  width: 90%;
+  height: 40px;
+  font-size: 16px;
+  margin: 5px 0 0 5px;
   resize: none;
 }
 
@@ -1192,8 +1208,8 @@ hr {
 
 .pstp-container .content-pop form .content-btn {
   display: flex;
-  justify-content: right;
-  margin-right: 30px;
+  justify-content: left;
+  margin-left: 30px;
 }
 
 
@@ -1217,7 +1233,7 @@ hr {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
   color: #1E3231;
 }
 
@@ -1228,7 +1244,7 @@ hr {
 }
 
 .contact-container .row {
-  margin-top: 30px;
+  margin: 5%;
   display: flex;
   justify-content: center;
 }
@@ -1239,6 +1255,15 @@ hr {
   width: 1px;
   height: 500px;
   background-color: #1E3231;
+}
+
+.contact-container .row .contact-col {
+    flex-basis: 40%;
+    padding-right: 35px;
+}
+
+.contact-container .row .border-right {
+    border-right: 2px solid #1E3231;
 }
 
 .contact-container .row .contact-col form .contact-details {
@@ -1321,7 +1346,12 @@ hr {
   font-size: 22px;
 }
 
-.contact-container .row .contact-col .contact-pair i {
+.contact-container .row .contact-col .contact-pair .fa-envelope {
+  font-size: 20px;
+  color: #fff;
+}
+
+.contact-container .row .contact-col .contact-pair .fa-phone {
   font-size: 20px;
   color: #fff;
 }
@@ -1330,6 +1360,7 @@ hr {
   font-size: 22px;
   font-weight: 400;
   margin-left: 10px;
+  margin-top: 3px;
 }
 
 /* Content Post Section  */
@@ -1354,9 +1385,11 @@ hr {
 }
 
 .pc-container .row .content-col {
+  flex-basis: 19%;
   display: flex;
   flex-direction: row;
 }
+
 .pc-container .row .content-col .icon .fa-user {
   font-size: 22px;
   color: #1E3231;
@@ -1478,14 +1511,25 @@ hr {
   margin: 15px 0 0 20px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .ms-container .row .content-col {
   margin: auto;
   padding-top: 10px;
   width: 100%;
-  margin-top: 20px;
-  border: 1px solid #d9d9d9;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid #1E3231;
+}
+
+
+.ms-container .row .content-col p div p {
+    font-size: 16px;
+}
+
+.ms-container .row .content-col small {
+    font-size: 16px;
 }
 
 .ms-container .row .content-col textarea {
@@ -1662,10 +1706,7 @@ hr {
 .post-container .wrapper-post {
     flex: 0 0 auto;
     width: 25%;
-    flex-direction: column;
     margin: 20px auto;
-    justify-content: center;
-    align-items: center;
 }
 
 .post-container .paginate {

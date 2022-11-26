@@ -33,6 +33,7 @@ Route::get('/categories', [App\Http\Controllers\FrontEnd\FrontEndController::cla
 Route::get('/faq', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'faq']);
 Route::get('category/{category_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewCategoryPost']);
 Route::get('category/{category_name}/{post_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewPost']);
+Route::get('search', [App\Http\Controllers\FrontEnd\FrontEndController::class . 'searchPosts']);
 
 // Comment Controller
 Route::post('comments', [App\Http\Controllers\FrontEnd\CommentController::class, 'store']);

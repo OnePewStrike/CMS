@@ -38,12 +38,12 @@
     <section class="collection">
         <h1>Latest Posts</h1>
         <div class="row">
-            @foreach ($latest_posts as $latest_post_item)
-                <div class="col md-4">
-                    <div class="card card-body mb-3">
-                        <a href="{{ url('category/' . $latest_post_item->$category->name . '/' . $latest_post_item->name) }}"
+            @foreach ($latest_posts as $post_item)
+                <div class="col-md-4">
+                    <div class="content mb-3">
+                        <a href="{{ url('category/' . $post_item->category->name . '/' . $post_item->name) }}"
                             class="text-decoration-none">
-                            <h5 class="text-dark mb-0">{{ $latest_post_item->name }}</h5>
+                            <h5 class="text-dark mb-0">{{ $post_item->name }}</h5>
                         </a>
                     </div>
                 </div>
@@ -93,5 +93,6 @@
             @endforeach
         </div>
     </section>
+
 
 @endsection
