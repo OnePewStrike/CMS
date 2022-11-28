@@ -18,11 +18,6 @@ Route::get('/', function () {
     return view('main');
 });
 
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-
 Auth::routes();
 
 // FrontEnd Controller Routes
@@ -33,6 +28,8 @@ Route::get('/categories', [App\Http\Controllers\FrontEnd\FrontEndController::cla
 Route::get('/faq', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'faq']);
 Route::get('category/{category_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewCategoryPost']);
 Route::get('category/{category_name}/{post_name}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'viewPost']);
+Route::get('new-post', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'create']);
+Route::post('new-post', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'store']);
 Route::get('search', [App\Http\Controllers\FrontEnd\FrontEndController::class . 'searchPosts']);
 
 // Comment Controller

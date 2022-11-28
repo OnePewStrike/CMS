@@ -8,9 +8,9 @@
     <section class="home-intro-banner">
         <h2> Lorem ipsum dolor. </h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat. </p>
-        <button type="submit" class="btn btn-primary" id="openPost" style="padding: 8px 40px 8px 40px;">Post</button>
+        <a href="{{ url('new-post') }}" class="btn btn-primary text-decoration-none">Post</a>
 
-        <!-- Post Pop-Up Section  -->
+        {{-- <!-- Post Pop-Up Section  -->
         <section class="pstp-container" id="post">
             <div class="content-pop" id="popup">
                 <form action="#">
@@ -44,7 +44,7 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </section> --}}
     </section>
 
     <!-- Standard Search Bar Section  -->

@@ -120,7 +120,6 @@
     <!-- Footer Section  -->
     <section class="footer-st">
         <h3>@Honghong Confessions</h3>
-        <h3>Web Application Development</h3>
     </section>
 </body>
 

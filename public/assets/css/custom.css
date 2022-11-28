@@ -1115,9 +1115,9 @@ hr {
 .pstp-container {
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   position: fixed;
-  background: rgba(255, 255, 255, 0.2);
+  background: #485665;
   backdrop-filter: blur(8px);
   top: 0;
   justify-content: center;
@@ -1130,7 +1130,7 @@ hr {
 }
 
 .pstp-container .content-pop {
-  width: 420px;
+  width: 410px;
   height: 620px;
   border-radius: 5px;
   background: #fff;
@@ -1139,7 +1139,8 @@ hr {
   z-index: 2;
 }
 
-.pstp-container .content-pop form .header {
+.pstp-container .content-pop .header {
+  width: 100%;
   position: relative;
   padding: 20px 20px 10px 20px;
   height: 68px;
@@ -1149,9 +1150,18 @@ hr {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.pstp-container .content-pop form .header h2 {
+.pstp-container .content-pop .header h2 {
   font-size: 24px;
   font-weight: 400;
+}
+
+.pstp-container .content-pop .header a {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    font-size: 22px;
+    background: #1E3231;
+    color: #fff;
 }
 
 .pstp-container .content-pop form .header button {
@@ -1164,7 +1174,7 @@ hr {
 }
 
 .pstp-container .content-pop form .content-row {
-  margin: 20px 0 0 0px;
+    margin: 5%;
 }
 
 .pstp-container .content-pop form .content-row textarea {
@@ -1175,34 +1185,44 @@ hr {
 .pstp-container .content-pop form .content-row .content-title {
   display: flex;
   justify-content: left;
-  margin-left: 20px;
+  flex-direction: column;
 }
 
 .pstp-container .content-pop form .content-row h3 {
   font-size: 16px;
 }
 
-.pstp-container .content-pop form .content-row textarea.title {
-  width: 90%;
-  height: 60px;
-  font-size: 16px;
-  margin: 10px 0 0 5px;
-  resize: none;
-}
-
-.pstp-container .content-pop form .content-row textarea.category {
-  width: 90%;
+.pstp-container .content-pop form .content-row .content-title select {
+  width: 100%;
   height: 40px;
   font-size: 16px;
-  margin: 5px 0 0 5px;
+  border: 1px solid #1E3231;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+.pstp-container .content-pop form .content-row .title {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #1E3231;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+.pstp-container .content-pop form .content-row .category {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  margin: 5px auto;
   resize: none;
 }
 
 .pstp-container .content-pop form .content-row textarea.message {
-  width: 90%;
+  width: 100%;
   height: 180px;
   font-size: 16px;
-  margin: 10px 0 20px 5px;
+  margin: 10px 0 20px 0px;
   resize: none;
 }
 
@@ -1508,7 +1528,7 @@ hr {
 }
 
 .ms-container .row {
-  margin: 15px 0 0 20px;
+  margin: 5px auto;
   display: flex;
   flex-direction: column;
   border-radius: 10px;

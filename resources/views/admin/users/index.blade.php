@@ -7,7 +7,7 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4">
+        <div class="card mt-4 mb-3">
 
             <div class="card-header mt-2">
                 <h4>View Users</h4>

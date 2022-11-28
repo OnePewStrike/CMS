@@ -6,6 +6,8 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Admin\PostFormRequest;
 
 class FrontEndController extends Controller
 {
@@ -42,7 +44,7 @@ class FrontEndController extends Controller
         $category = Category::where('name', $category_name)->where('status', '0')->first();
         if ($category) {
             // $post = Post::where('category_id', $category->id)->where('status', '0')->paginate(1);
-            $post = Post::where('category_id', $category->id)->where('status', '0')->orderBy('created_at', 'DESC')->paginate(4);
+            $post = Post::where('category_id', $category->id)->where('status', '0')->orderBy('created_at', 'DESC')->paginate(8);
             return view('frontend.post.index', compact('post', 'category'));
         } else {
             return view('frontend.index');
@@ -61,6 +63,26 @@ class FrontEndController extends Controller
         }
     }
 
+    public function create()
+    {
+        $category = Category::where('status', '0')->get();
+        return view('frontend.post.create', compact('category'));
+    }
+
+    public function store(PostFormRequest $request)
+    {
+        $data = $request->validated();
+
+        $post = new Post;
+        $post->category_id = $data['category_id'];
+        $post->name = $data['name'];
+        $post->description = $data['description'];
+        $post->status = $request['status'] == true ? '1' : '0';
+        $post->created_by = Auth::user()->id;
+        $post->save();
+
+        return redirect('home')->with('message', 'Post Added Succesfully');
+    }
     public function searchPosts(Request $request)
     {
         if ($request->search) {

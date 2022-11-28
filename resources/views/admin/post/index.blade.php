@@ -7,7 +7,7 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4">
+        <div class="card mt-4 mb-3">
 
             <div class="card-header">
                 <h4 class="mt-2">View Posts
