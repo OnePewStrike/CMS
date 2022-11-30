@@ -39,16 +39,32 @@ class FrontEndController extends Controller
         return view('frontend.faq');
     }
 
-    public function viewCategoryPost($category_name)
+    public function viewCategoryPost(Request $request, $category_name)
     {
         $category = Category::where('name', $category_name)->where('status', '0')->first();
         if ($category) {
             // $post = Post::where('category_id', $category->id)->where('status', '0')->paginate(1);
-            $post = Post::where('category_id', $category->id)->where('status', '0')->orderBy('created_at', 'DESC')->paginate(8);
-            return view('frontend.post.index', compact('post', 'category'));
+            $search = $request['search'] ?? "";
+
+            if ($search != "") {
+                $post = Post::where('category_id', $category->id)->where('name', 'LIKE', "%$search")->where('status', '0')->orderBy('created_at', 'DESC')->paginate(8);
+            } else {
+                $post = Post::where('category_id', $category->id)->where('status', '0')->orderBy('created_at', 'DESC')->paginate(8);
+            }
+            return view('frontend.post.index', compact('post', 'category', 'search'));
         } else {
             return view('frontend.index');
         }
+
+        // $search = $request['search'] ?? "";
+        // if ($search != "") {
+        //     $posts = Post::where('name', '=', $search)->get();
+        // } else {
+        //     $posts = Post::all();
+        // }
+
+        // $data = compact('posts', 'search');
+        // return view('admin.post.index')->with($data);
     }
 
     public function viewPost(string $category_name, string $post_name)

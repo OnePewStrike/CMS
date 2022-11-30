@@ -34,7 +34,7 @@ Route::get('search', [App\Http\Controllers\FrontEnd\FrontEndController::class . 
 
 // Comment Controller
 Route::post('comments', [App\Http\Controllers\FrontEnd\CommentController::class, 'store']);
-Route::post('/delete-comment', [App\Http\Controllers\FrontEnd\CommentController::class, 'delete']);
+Route::post('delete-comment', [App\Http\Controllers\FrontEnd\CommentController::class, 'destroy']);
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // Dashboard Controller Routes

@@ -84,9 +84,9 @@
                         {!! $comment->comment_body !!}
                     </p>
                     @if (Auth::check() && Auth::id() == $comment->user_id)
-                        <p type="button" value="{{ $comment->id }}" class="btn-quinary deleteComment">
+                        <button type="button" value="{{ $comment->id }}" class="btn btn-quinary deleteComment">
                             Delete
-                        </p>
+                        </button>
                     @endif
                 </div>
 

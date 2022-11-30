@@ -37,7 +37,7 @@ class CommentController extends Controller
         }
     }
 
-    public function delete(Request $request)
+    public function destroy(Request $request)
     {
         if (Auth::check()) {
             $comment = Comment::where('id', $request->comment->id)->where('user_id', Auth::user()->id)->first();
