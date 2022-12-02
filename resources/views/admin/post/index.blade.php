@@ -11,7 +11,7 @@
 
             <div class="card-header">
                 <h4 class="mt-2">View Posts
-                    <a href="{{ url('admin/add-post') }}" class="btn btn-quarternary float-end">Add Posts</a>
+                    <a href="{{ url('admin/add-post') }}" class="btn btn-quinary float-end">Add Posts</a>
                 </h4>
 
             </div>

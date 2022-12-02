@@ -9,8 +9,8 @@
         <h5>Here's the latest list of records</h5>
         <div class="row mt-4">
             <div class="col-xl-3 col-md-6">
-                <div class="card bg-custom  text-white mb-4" style="background:#485665;">
-                    <div class="card-body" style="color:#F6C0D0;">
+                <div class="card bg-custom  text-white mb-4" style="background:#5B2300;">
+                    <div class="card-body" style="color:#F7F4F3;">
                         Total Categories
                         <h2>{{ $category_count }}</h2>
                     </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-custom text-white mb-4">
-                    <div class="card-body" style="color:#F6C0D0;">
+                    <div class="card-body" style="color:#F7F4F3;">
                         Total Posts
                         <h2>{{ $post_count }}</h2>
                     </div>
@@ -34,7 +34,7 @@
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-custom  text-white mb-4">
-                    <div class="card-body" style="color:#F6C0D0;">
+                    <div class="card-body" style="color:#F7F4F3;">
                         Total Users
                         <h2>{{ $user_count }}</h2>
                     </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-custom  text-white mb-4">
-                    <div class="card-body" style="color:#F6C0D0;">
+                    <div class="card-body" style="color:#F7F4F3;">
                         Total Admins
                         <h2>{{ $admin_count }}</h2>
                     </div>

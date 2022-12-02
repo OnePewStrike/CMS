@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="hero">
+    <section class="hero hero-standard">
+        <img src="assets/images/logo.png" alt="">
+        <h2>It all starts here</h2>
         <div class="wrapper">
             <div class="form signup">
-                <header>Register to Honghong</header>
+                <header>Register to Confessions</header>
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="field input">
@@ -60,5 +62,10 @@
                 </form>
             </div>
         </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <section class="footer-st">
+        <h3>@Silliman Confessions</h3>
     </section>
 @endsection

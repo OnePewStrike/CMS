@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="hero">
+    <section class="hero hero-short">
+        <img src="assets/images/logo.png" alt="">
+        <h2>It all starts here</h2>
         <div class="wrapper">
             <div class="form signup">
-                <header>Login to Honghong</header>
+                <header>Login to Confessions</header>
                 {{-- @if (session('message'))
                     <h6 class="alert alert-warning mb-3">{{ session('message') }}</h6>
                 @endif --}}
@@ -43,5 +45,10 @@
                 </form>
             </div>
         </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <section class="footer-st">
+        <h3>@Silliman Confessions</h3>
     </section>
 @endsection

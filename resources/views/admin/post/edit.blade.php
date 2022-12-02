@@ -11,7 +11,7 @@
 
             <div class="card-header">
                 <h4>Update Post
-                    <a href="{{ url('admin/posts') }}" class="btn btn-danger float-end">Go Back</a>
+                    <a href="{{ url('admin/posts') }}" class="btn btn-quarternary float-end">Go Back</a>
                 </h4>
 
             </div>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary float-end mb-3">Update Post</button>
+                                <button type="submit" class="btn btn-quinary float-end mb-3">Update Post</button>
                             </div>
                         </div>
                     </div>

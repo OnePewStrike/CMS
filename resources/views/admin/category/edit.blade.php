@@ -10,7 +10,7 @@
             <div class="card-header">
 
                 <h4>Update Category
-                    <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Go Back</a>
+                    <a href="{{ url('admin/category') }}" class="btn btn-quarternary float-end">Go Back</a>
                 </h4>
 
             </div>
@@ -53,7 +53,7 @@
                             <input type="checkbox" name="status" {{ $category->status == '1' ? 'checked' : '' }} />
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary float-end mb-3"> Update Category </button>
+                            <button type="submit" class="btn btn-quinary float-end mb-3"> Update Category </button>
                         </div>
                     </div>
 

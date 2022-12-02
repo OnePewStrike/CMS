@@ -12,10 +12,10 @@
 
 <body>
     <!-- Header Section  -->
-    <section class="header login custom-pad-guest">
+    <section class="header login custom-pad-guest" style="background: #F7F4F3;">
         <div class="left-content">
             <a href="main.html">
-                <h3 class="logo" style="color: #1E3231;">Honghong</h3>
+                <h3 class="logo" style="color: #5B2300;">theSillimanCon</h3>
             </a>
         </div>
         <div class="right-content">
@@ -49,7 +49,7 @@
             <div class="left-content">
                 <h2>Lorem ipsum dolor</h2>
                 <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit. Ut <br> sapien felis</p>
-                <a href="{{ route('login') }}"><button class="btn btn-secondary btn-border btn-large">Get
+                <a href="{{ route('login') }}"><button class="btn btn-secondary">Get
                         Connected</button></a>
             </div>
             <div class="right-content">
@@ -114,12 +114,12 @@
     <!-- Join Section  -->
     <section class="join-container">
         <h2>Lorem ipsum dolor sit.</h2>
-        <a href="{{ route('login') }}"><button class="btn btn-secondary btn-large">Get Connected</button></a>
+        <a href="{{ route('login') }}"><button class="btn btn-primary btn-large">Get Connected</button></a>
     </section>
 
     <!-- Footer Section  -->
     <section class="footer-st">
-        <h3>@Honghong Confessions</h3>
+        <h3>@Silliman Confessions</h3>
     </section>
 </body>
 

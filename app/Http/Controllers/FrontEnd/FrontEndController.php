@@ -13,14 +13,14 @@ class FrontEndController extends Controller
 {
     public function index()
     {
-        $all_categories = Category::where('status', '0')->get();
         $latest_posts = Post::where('status', '0')->orderBy('created_at', 'DESC')->get()->take(9);
-        return view('frontend.index', compact('all_categories', 'latest_posts'));
+        return view('frontend.index', compact('latest_posts'));
     }
 
     public function about()
     {
-        return view('frontend.about');
+        $all_categories = Category::where('status', '0')->get();
+        return view('frontend.about', compact('all_categories'));
     }
 
     public function contact()
@@ -55,16 +55,6 @@ class FrontEndController extends Controller
         } else {
             return view('frontend.index');
         }
-
-        // $search = $request['search'] ?? "";
-        // if ($search != "") {
-        //     $posts = Post::where('name', '=', $search)->get();
-        // } else {
-        //     $posts = Post::all();
-        // }
-
-        // $data = compact('posts', 'search');
-        // return view('admin.post.index')->with($data);
     }
 
     public function viewPost(string $category_name, string $post_name)
