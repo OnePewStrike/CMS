@@ -10,7 +10,7 @@
         <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
             <div class="card-header" style="border-bottom: 1px solid #1e3231;">
                 <h4 class="mt-2">View Posts
-                    <a href="{{ url('admin/add-post') }}" class="btn btn-quarternary float-end">Add Posts</a>
+                    <a href="{{ url('admin/add-post') }}" class="btn btn-quinary float-end">Add Posts</a>
                 </h4>
 
             </div>

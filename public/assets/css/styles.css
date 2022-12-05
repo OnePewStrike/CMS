@@ -44,6 +44,7 @@
   --bs-primary-rgb: 13, 110, 253;
   --bs-custom-dark: 72, 86, 101;
   --bs-custom-grey: 72, 86, 101;
+  --bs-custom-red: 	91, 35, 0;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -53,6 +54,7 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-custom-dark: 30, 50, 49;
   --bs-white-rgb: 255, 255, 255;
+  --bs-custom-red: 	91, 35, 0;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -4492,7 +4494,7 @@ textarea.form-control-lg {
 }
 
 .navbar-dark .navbar-brand {
-  color: #F6C0D0;
+  color: #F7F4F3;
 }
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
   color: #fff;
@@ -4534,7 +4536,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #564D4A;
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -4586,7 +4588,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid #564D4A;
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
@@ -7778,6 +7780,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-red {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-custom-red), var(--bs-text-opacity)) !important;
+}
+
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
@@ -7836,7 +7843,7 @@ textarea.form-control-lg {
 
 .bg-custom {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-custom-dark), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-custom-red), var(--bs-bg-opacity)) !important;
 }
 
 .bg-success {
@@ -7864,19 +7871,26 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-dark {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-custom-dark), var(--bs-bg-opacity)) !important;
-}
+
 
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-red {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-custom-red), var(--bs-bg-opacity)) !important;
+}
+
 .bg-white {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-custom-red {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-custom-red), var(--bs-bg-opacity)) !important;
 }
 
 .bg-body {
@@ -11494,7 +11508,7 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #1E3231;
+  background-color: #fff;
   color: rgba(255, 255, 255, 0.5);
 }
 

@@ -10,7 +10,7 @@
             <div class="card-header" style="border-bottom: 1px solid #1e3231;">
 
                 <h4>Add Category
-                    <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Go Back</a>
+                    <a href="{{ url('admin/category') }}" class="btn btn-quarternary float-end">Go Back</a>
                 </h4>
 
             </div>
@@ -52,7 +52,7 @@
                             <input type="checkbox" name="status">
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary float-end mb-3"> Save Category </button>
+                            <button type="submit" class="btn btn-quinary float-end mb-3"> Add Category </button>
                         </div>
                     </div>
 

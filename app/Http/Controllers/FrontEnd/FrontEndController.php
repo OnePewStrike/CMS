@@ -22,6 +22,8 @@ class FrontEndController extends Controller
     {
         $all_categories = Category::where('status', '0')->get();
         return view('frontend.about', compact('all_categories'));
+        $all_categories = Category::where('status', '0')->get();
+        return view('frontend.about', compact('all_categories'));
     }
 
     public function contact()

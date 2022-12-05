@@ -1,50 +1,55 @@
 <div id="layoutSidenav_nav">
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-        <div class="sb-sidenav-menu">
+        <div class="sb-sidenav-menu"style="border: 1px solid #564D4A; background: #F7F4F3;">
             <div class="nav">
-                <div class="sb-sidenav-menu-heading" style="background: #8E7C93; color: #1E3231;">Core</div>
+                <div class="sb-sidenav-menu-heading" style="background: #564D4A; color: #fff;">Core</div>
                 <a class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}"
-                    href="{{ url('admin/dashboard') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    href="{{ url('admin/dashboard') }}" style="color: #564D4A;">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt" style="color: #564D4A;"></i></div>
                     Dashboard
                 </a>
 
-                <div class="sb-sidenav-menu-heading mt-4" style="background: #8E7C93; color: #1E3231;">Interface</div>
+                <div class="sb-sidenav-menu-heading mt-4" style="background: #564D4A; color: #fff;">Interface</div>
                 <a class="nav-link {{ Request::is('admin/category') || Request::is('admin/add-category') || Request::is('admin/edit-category/*') ? 'active' : '' }} ? 'collapse active':'collapsed' }}"
                     href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false"
-                    aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    aria-controls="collapseLayouts" style="color: #564D4A;">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns" style="color: #564D4A;"></i></div>
                     Category
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down" style="color: #564D4A;"></i>
+                    </div>
                 </a>
                 <div class="collapse {{ Request::is('admin/category') || Request::is('admin/add-category') || Request::is('admin/edit-category/*') ? 'active' : '' }} ? 'show':'' }}"
-                    id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
+                    id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion"
+                    style="color: #564D4A;">
+                    <nav class="sb-sidenav-menu-nested nav" style="color: #564D4A;">
                         <a class="nav-link {{ Request::is('admin/add-category') ? 'active' : '' }}"
-                            href=" {{ url('admin/add-category') }} ">Add Category</a>
+                            href=" {{ url('admin/add-category') }}" style="color: #564D4A;">Add Category</a>
                         <a class="nav-link {{ Request::is('admin/category') || Request::is('admin/edit-category/*') ? 'active' : '' }}"
-                            href=" {{ url('admin/category') }} ">View Category</a>
+                            href=" {{ url('admin/category') }} " style="color: #564D4A;">View Category</a>
                     </nav>
                 </div>
                 <a class="nav-link {{ Request::is('admin/posts') || Request::is('admin/add-post') || Request::is('admin/edit-post/*') ? 'active' : '' }} ? 'collapse active':'collapsed' }}"
                     href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false"
-                    aria-controls="collapseLayouts">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    aria-controls="collapseLayouts" style="color: #564D4A;">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-pen-nib" style="color: #564D4A;"></i></div>
                     Posts
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down" style="color: #564D4A;"></i>
+                    </div>
                 </a>
                 <div class="collapse {{ Request::is('admin/posts') || Request::is('admin/add-post') || Request::is('admin/edit-post/*') ? 'active' : '' }} ? 'show':'' }}"
-                    id="collapsePost" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    id="collapsePost" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion"
+                    style="color: #564D4A;">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link {{ Request::is('admin/add-post') ? 'active' : '' }}"
-                            href=" {{ url('admin/add-post') }} ">Add Post</a>
+                            href=" {{ url('admin/add-post') }} " style="color: #564D4A;">Add Post</a>
                         <a class="nav-link {{ Request::is('admin/posts') || Request::is('admin/edit-post/*') ? 'active' : '' }}"
-                            href=" {{ url('admin/posts') }} ">View Post</a>
+                            href=" {{ url('admin/posts') }} " style="color: #564D4A;">View Post</a>
                     </nav>
                 </div>
 
-                <a class="nav-link {{ Request::is('admin/users') ? 'active' : '' }}" href="{{ url('admin/users') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                <a class="nav-link {{ Request::is('admin/users') ? 'active' : '' }}" href="{{ url('admin/users') }}"
+                    style="color: #564D4A;">
+                    <div class="sb-nav-link-icon"><i class="fas fa-users" style="color: #564D4A;"></i></div>
                     Users
                 </a>
 
@@ -83,8 +88,8 @@
 
             </div>
         </div>
-        <div class="sb-sidenav-footer" style="background: #485665;">
-            <div class="small">Logged in as:</div>
+        <div class="sb-sidenav-footer" style="background: #5B2300; color: #F7F4F3;">
+            <div>Logged in as:</div>
             Admin
         </div>
     </nav>

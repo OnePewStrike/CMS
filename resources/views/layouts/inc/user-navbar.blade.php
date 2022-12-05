@@ -1,8 +1,11 @@
+<section class="logo-container">
+    <a href="{{ url('home') }}" class="text-decoration-none">
+        <h3 class="logo">theSillimanCon</h3>
+    </a>
+</section>
+
 <section class="header custom-pad-user">
     <div class="left-content">
-        <a href="{{ url('home') }}">
-            <h3 class="logo">Honghong</h3>
-        </a>
         <ul class="nav-links">
             <li class="{{ Request::is('home') ? 'active' : '' }}">
                 <a href="{{ url('home') }}">Home</a>
@@ -14,7 +17,16 @@
                 <a href="{{ url('contact') }}">Contact</a>
             </li>
             <li class="{{ Request::is('categories') ? 'active' : '' }}">
-                <a href="{{ url('categories') }}">Categories</a>
+                <a href="{{ url('categories') }}">Categories <i class="fa-solid fa-angle-down"></i></a>
+
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 1</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="{{ Request::is('faq') ? 'active' : '' }}">
                 <a href="{{ url('faq') }}">FAQs</a>
