@@ -46,27 +46,3 @@
         </li>
     </div>
 </section>
-
-<!-- Sub-header Section  -->
-<section class="sub-header">
-    <div class="left-content">
-        @php
-            $categories = App\Models\Category::where('navbar_status', '0')
-                ->where('status', '0')
-                ->get();
-        @endphp
-        @foreach ($categories as $cateitem)
-            <div class="content-col">
-                <button>
-                    <img src="{{ asset("$cateitem->image") }}" alt="">
-                    <a href="{{ url('category/' . $cateitem->name) }}"> {{ $cateitem->name }}</a>
-                </button>
-            </div>
-        @endforeach
-    </div>
-    <div class="right-content">
-        {{-- <div class="breadcrumbs">
-            <a href="home.html">Home</a>
-        </div> --}}
-    </div>
-</section>

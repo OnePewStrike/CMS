@@ -7,7 +7,7 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4">
+        <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -17,7 +17,7 @@
                 </div>
             @endif
 
-            <div class="card-header">
+            <div class="card-header" style="border-bottom: 1px solid #1e3231;">
                 <h4>Add Posts
                     <a href="{{ url('admin/posts') }}" class="btn btn-danger float-end">Go Back</a>
                 </h4>
@@ -30,7 +30,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="">Category</label>
-                        <select name="category_id" class="form-control">
+                        <select name="category_id" class="form-control" style="border: 1px solid #1e3231;">
                             @foreach ($category as $cateitem)
                                 <option value="{{ $cateitem->id }}">{{ $cateitem->name }}</option>
                             @endforeach
@@ -38,11 +38,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="">Post Name</label>
-                        <input type="text" name="name" class="form-control" />
+                        <input type="text" name="name" class="form-control" style="border: 1px solid #1e3231;" />
                     </div>
                     <div class="mb-3">
                         <label for="">Description</label>
-                        <textarea name="description" rows="5" class="form-control"></textarea>
+                        <textarea name="description" rows="5" class="form-control" style="border: 1px solid #1e3231;"></textarea>
                     </div>
 
                     <div class="row">

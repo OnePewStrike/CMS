@@ -30,8 +30,8 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4 mb-3">
-            <div class="card-header">
+        <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
+            <div class="card-header" style="border-bottom: 1px solid #1e3231;">
                 <h4 class="mt-2"> View Category <a href=" {{ url('admin/add-category') }} "
                         class="btn btn-quarternary btn-sm float-end" style="padding-left, padding-right: 20px">
                         Add Category </a></h4>

@@ -7,9 +7,8 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4 mb-3">
-
-            <div class="card-header mt-2">
+        <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
+            <div class="card-header" style="border-bottom: 1px solid #1e3231;">
                 <h4>View Users</h4>
 
             </div>

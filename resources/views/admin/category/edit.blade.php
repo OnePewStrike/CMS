@@ -6,8 +6,8 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4">
-            <div class="card-header">
+        <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
+            <div class="card-header" style="border-bottom: 1px solid #1e3231;">
 
                 <h4>Update Category
                     <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Go Back</a>

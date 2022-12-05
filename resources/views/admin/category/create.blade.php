@@ -6,8 +6,8 @@
 
     <div class="container-fluid px-4">
 
-        <div class="card mt-4">
-            <div class="card-header">
+        <div class="card mt-4 mb-3" style="border: 1px solid #1e3231;">
+            <div class="card-header" style="border-bottom: 1px solid #1e3231;">
 
                 <h4>Add Category
                     <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Go Back</a>
@@ -30,15 +30,15 @@
 
                     <div class="mb-3">
                         <label> Category Name </label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="name" class="form-control" style="border: 1px solid #1e3231;">
                     </div>
                     <div class="mb-3">
                         <label> Description </label>
-                        <textarea name="description" rows="5" class="form-control"></textarea>
+                        <textarea name="description" rows="5" class="form-control" style="border: 1px solid #1e3231;"></textarea>
                     </div>
                     <div class="mb-3">
                         <label> Image </label>
-                        <input type="file" name="image" class="form-control">
+                        <input type="file" name="image" class="form-control" style="border: 1px solid #1e3231;">
                     </div>
 
 
